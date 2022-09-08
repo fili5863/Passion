@@ -1,3 +1,4 @@
+/* Variabler med værdien af restdb url + Api-key kode. */
 const url = "https://database-4ee2.restdb.io/rest/skoudvalg ";
 const mereinfo = {
   headers: {
@@ -5,13 +6,18 @@ const mereinfo = {
   },
 };
 
+/*  */
 let data;
 let filter = "alle";
 
+/* Variabel "filterknapper" med værdien af alle punkter fra navigationen. Tilføjet klik element 
+på alle knapper. Når der klikkes på kanppen hentes data. */
 const filterKnapper = document.querySelectorAll("nav li");
-filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategorier));
+filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerKategorier));
 hentData();
 
+/* Funktionen "filterKategorier" gør at dataen bliver filtreret når der klikkes på en bestemt
+kategori. */
 function filtrerKategorier() {
   filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
@@ -19,6 +25,7 @@ function filtrerKategorier() {
   vis(data);
 }
 
+/* Funktionen hentData hjælper os med at få data hentet igennem fetch ned fra variablerne url og mereinfo. Derudover bliver data vist i konsollen. */
 async function hentData() {
   const respons = await fetch(url, mereinfo);
   data = await respons.json();
@@ -31,7 +38,7 @@ function vis(data) {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
-  data.forEach(sko => {
+  data.forEach((sko) => {
     if (filter == sko.kategori || "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
