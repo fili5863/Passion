@@ -14,7 +14,9 @@ let filter = "alle";
 /* Variabel "filterknapper" med værdien af alle punkter fra navigationen. Tilføjet klik element 
 på alle knapper. Når der klikkes på kanppen hentes data. */
 const filterKnapper = document.querySelectorAll("nav li");
-filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategorier));
+filterKnapper.forEach((knap) =>
+  knap.addEventListener("click", filtrerKategorier)
+);
 hentData();
 
 /* Funktionen "filterKategorier" gør at dataen bliver filtreret når der klikkes på en bestemt
@@ -38,18 +40,36 @@ function vis(data) {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
-  data.forEach(sko => {
+  data.forEach((sko) => {
     if (filter == sko.type || filter == "alle") {
       const klon = template.cloneNode(true);
-      klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
+      klon.querySelector(".billedeurl").src =
+        "skogalleri/" + sko.billedetekst + ".webp";
       klon.querySelector(".navn").textContent = sko.navn;
       // klon.querySelector(".type").textContent = sko.type;
       // klon.querySelector(".størrelse").textContent = sko.størrelse;
       klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
-      klon.querySelector("article").addEventListener("click", () => visDetaljer(sko));
+      klon
+        .querySelector("article")
+        .addEventListener("click", () => visDetaljer(sko));
       main.appendChild(klon);
     }
   });
+}
+
+const popup = document.querySelector("#popup");
+function visDetaljer(sko) {
+  popup.style.display = "flex";
+  popup.querySelector(".navn").textContent = sko.navn;
+  popup.querySelector(".billedeurl").src =
+    "skogalleri/" + sko.billedetekst + ".webp";
+  popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
+  popup.querySelector(".pris").textContent = sko.pris + "kr.";
+}
+document.querySelector("#popupKnap").addEventListener("click", forsvindKnap);
+
+function forsvindKnap() {
+  popup.style.display = "none";
 }
 hentData();
