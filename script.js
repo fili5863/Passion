@@ -1,5 +1,6 @@
 /* Variabler med værdien af restdb url + Api-key kode. */
-const url = "https://database-4ee2.restdb.io/rest/skoudvalg ";
+const url = "https://database-4ee2.restdb.io/rest/skoudvalg";
+const header = document.querySelector("h2");
 const mereinfo = {
   headers: {
     "x-apikey": "f19d5650d27a620e47987f0c68b8a6a4e5421",
@@ -23,12 +24,13 @@ function filtrerKategorier() {
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   vis(data);
+  header.textContent = this.textContent;
 }
 
 /* Funktionen hentData hjælper os med at få data hentet igennem fetch ned fra variablerne url og mereinfo. Derudover bliver data vist i konsollen. */
 async function hentData() {
-  const respons = await fetch(url, mereinfo);
-  data = await respons.json();
+  const response = await fetch(url, mereinfo);
+  data = await response.json();
   console.log(data);
   vis(data);
 }
@@ -46,7 +48,8 @@ function vis(data) {
       klon.querySelector(".type").textContent = sko.type;
       klon.querySelector(".størrelse").textContent = sko.størrelse;
       klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
-      klon.querySelector(".pris").textContent = sko.pris;
+      klon.querySelector(".pris").textContent = sko.pris + "kr.";
+      main.appendChild(klon);
     }
   });
 }
