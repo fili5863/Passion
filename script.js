@@ -47,6 +47,7 @@ function vis(data) {
       // klon.querySelector(".størrelse").textContent = sko.størrelse;
       klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
+      klon.querySelector("article").addEventListener("click", () => visDetaljer(sko));
       main.appendChild(klon);
     }
   });
