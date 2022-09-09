@@ -1,26 +1,24 @@
+/* ------------- GENEREL ---------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 body {
   margin: 0 auto;
 }
 
-#liste {
-  max-width: 1500px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1em;
-  justify-content: center;
-  padding-top: 200px;
-}
-
+/* -------------- MENU ----------------*/
 header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   background-color: #7b806a;
   padding: 5px;
-}
-
-#popup {
-  display: none;
 }
 
 .nav1 {
@@ -66,3 +64,23 @@ li:hover {
 .valgt {
   background-color: #e0ae5d;
 }
+
+/* ----------- SPLASHBILLEDE -----------*/
+
+/* --------------- LISTE ----------------*/
+#liste {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+/* --------------- POPUP --------------*/
+#popup {
+  display: none;
+}
+
+/* --------------- FOOTER --------------*/
