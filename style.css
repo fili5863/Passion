@@ -6,17 +6,46 @@
 
 img {
   max-width: 100%;
-  height: 100%;
 }
 
 #liste {
-  max-width: 1500px;
+  max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1em;
+}
+
+article {
+  max-width: 400px;
   justify-content: center;
-  padding-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.billedeurl {
+  grid-column: span 2;
+}
+
+.navn {
+  grid-column: 1/2;
+  font-weight: normal;
+}
+.pris {
+  grid-column: 2/3;
+  justify-self: end;
+}
+.type {
+  grid-column: 1/2;
+}
+.beskrivelse {
+  grid-column: span 2;
+  margin-block-start: 10px;
+}
+
+#liste img {
+  max-width: 400px;
 }
 
 #popup {
@@ -88,12 +117,12 @@ li:hover {
 }
 
 .splash {
-  width: 1200px;
+  max-width: 1500px;
+
   margin: 0 auto;
   margin-block: 50px;
 }
 
 #splashbillede {
   border-radius: 20px;
-  object-fit: fill;
 }

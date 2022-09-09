@@ -43,8 +43,8 @@ function vis(data) {
       const klon = template.cloneNode(true);
       klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
       klon.querySelector(".navn").textContent = sko.navn;
-      klon.querySelector(".type").textContent = sko.type;
-      klon.querySelector(".størrelse").textContent = sko.størrelse;
+      // klon.querySelector(".type").textContent = sko.type;
+      // klon.querySelector(".størrelse").textContent = sko.størrelse;
       klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
       main.appendChild(klon);
