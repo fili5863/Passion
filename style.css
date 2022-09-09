@@ -12,6 +12,32 @@ img {
 #liste {
   max-width: 1500px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1em;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+#popup article {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  border-radius: 25px;
+  padding: 12px;
+  background-color: white;
 }
 
 /* -------------- MENU ----------------*/

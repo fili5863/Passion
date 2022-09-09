@@ -14,17 +14,16 @@ let filter = "alle";
 /* Variabel "filterknapper" med værdien af alle punkter fra navigationen. Tilføjet klik element 
 på alle knapper. Når der klikkes på kanppen hentes data. */
 const filterKnapper = document.querySelectorAll("nav li");
-filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerKategorier));
+filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategorier));
 hentData();
 
 /* Funktionen "filterKategorier" gør at dataen bliver filtreret når der klikkes på en bestemt
 kategori. */
 function filtrerKategorier() {
-  filter = this.dataset.kategori;
+  filter = this.dataset.type;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   vis(data);
-  header.textContent = this.textContent;
 }
 
 /* Funktionen hentData hjælper os med at få data hentet igennem fetch ned fra variablerne url og mereinfo. Derudover bliver data vist i konsollen. */
@@ -34,14 +33,13 @@ async function hentData() {
   console.log(data);
   vis(data);
 }
-hentData();
 
 function vis(data) {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
-  data.forEach((sko) => {
-    if (filter == sko.kategori || "alle") {
+  data.forEach(sko => {
+    if (filter == sko.type || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
       klon.querySelector(".navn").textContent = sko.navn;
@@ -53,3 +51,4 @@ function vis(data) {
     }
   });
 }
+hentData();
