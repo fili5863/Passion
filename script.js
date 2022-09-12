@@ -46,7 +46,6 @@ function vis(data) {
       // klon.querySelector(".type").textContent = sko.type;
       // klon.querySelector(".størrelse").textContent = sko.størrelse;
       klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
-      klon.querySelector(".køn").textContent = sko.køn;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
       klon.querySelector("article").addEventListener("click", () => visDetaljer(sko));
       main.appendChild(klon);
@@ -60,8 +59,6 @@ function visDetaljer(sko) {
   popup.querySelector(".navn").textContent = sko.navn;
   popup.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
   popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
-  popup.querySelector(".stand").textContent = sko.stand;
-  popup.querySelector(".størrelse").textContent = sko.størrelse;
   popup.querySelector(".pris").textContent = sko.pris + "kr.";
   document.querySelector("#popup article").addEventListener("click", () => (popup.style.display = "none"));
 }
