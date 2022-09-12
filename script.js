@@ -33,7 +33,7 @@ async function hentData() {
   console.log(data);
   vis(data);
 }
-
+/* Funktionen vis putter al vores data ind i ting som navn, pris, bekrivelse etc. */
 function vis(data) {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
@@ -52,4 +52,15 @@ function vis(data) {
     }
   });
 }
+/* Funktionen visDetaljer putter al vores data ind i ting som navn, pris og beskrivelse i vores popup. */
+const popup = document.querySelector("#popup");
+function visDetaljer(sko) {
+  popup.style.display = "flex";
+  popup.querySelector(".navn").textContent = sko.navn;
+  popup.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
+  popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
+  popup.querySelector(".pris").textContent = sko.pris + "kr.";
+  document.querySelector("#popup article").addEventListener("click", () => (popup.style.display = "none"));
+}
+
 hentData();
