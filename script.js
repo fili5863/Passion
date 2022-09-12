@@ -60,10 +60,7 @@ function visDetaljer(sko) {
   popup.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
   popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
   popup.querySelector(".pris").textContent = sko.pris + "kr.";
+  popup.addEventListener("click", () => (popup.style.display = "none"));
 }
-document.querySelector("#popupKnap").addEventListener("click", forsvindKnap);
 
-function forsvindKnap() {
-  popup.style.display = "none";
-}
 hentData();
