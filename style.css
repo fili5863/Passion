@@ -38,17 +38,59 @@ footer p {
 .splash {
   max-width: 1500px;
   margin: 0 auto;
-  margin-block: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 4fr 1fr;
+  place-content: center left;
 }
-
-#splashbillede {
-  border-radius: 20px;
-  background-image: url(/splashbilled/splashbillede7.png);
+.splash img {
   max-width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  grid-column: 1 / span 4;
+  grid-row: 1 / 3;
+}
+#doner {
+  grid-column: 4 / 5;
+  grid-row: 2;
+}
+#udvalg {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+button {
+  background-color: #7b806a;
+  border: 10px solid #f4eddf;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+  transform: translateY(-7px);
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 10px 30px;
+  }
 }
 
 /* ------------- LISTE ------------ */
