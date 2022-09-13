@@ -63,7 +63,7 @@ footer {
   padding-top: 140px;
   text-align: center;
   font-family: "playfair display";
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #575c4a;
 }
 
@@ -131,6 +131,15 @@ p {
 }
 .beskrivelse {
   grid-column: span 2;
+}
+.stand {
+  text-align: end;
+  margin-top: 15px;
+  font-style: italic;
+}
+.køn {
+  margin-top: 15px;
+  color: #e0ae5d;
 }
 
 #liste img {
