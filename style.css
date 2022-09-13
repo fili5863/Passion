@@ -3,7 +3,16 @@
   box-sizing: border-box;
   margin: 0;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -20px;
+}
 body {
   background-color: #f4eddf;
 }
@@ -17,10 +26,11 @@ footer {
   color: #fff;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  height: 30px;
-  padding-block: 20px;
-  margin-block-start: 100px;
-  align-self: flex-end;
+  height: 20px;
+}
+
+.push {
+  height: 90px;
 }
 
 .splash {
@@ -187,17 +197,6 @@ article button:hover {
 
 #koeb {
   margin-top: 1.5rem;
-}
-
-footer {
-  background-color: #575c4a;
-  color: #fff;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  /* height: 30px; */
-  padding-block: 20px;
-  margin-block-start: 100px;
-  align-self: flex-end;
 }
 
 /* -------------- MENU ----------------*/
