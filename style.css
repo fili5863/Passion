@@ -35,7 +35,7 @@ footer {
 
 .splash {
   max-width: 1500px;
-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -58,7 +58,7 @@ height: 100vh;
   grid-column: 1 / 2;
   grid-row: 2;
 }
-button {
+.splashbtn {
   background-color: #7b806a;
   border: 10px solid #f4eddf;
   border-radius: 100px;
@@ -81,18 +81,19 @@ button {
   touch-action: manipulation;
 }
 
-button:hover {
+.splashbtn:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
   transform: translateY(-7px);
 }
 
 @media (min-width: 768px) {
-  button {
+  .splashbtn {
     padding: 10px 30px;
   }
 
-#splashbillede {
-  border-radius: 20px;
+  #splashbillede {
+    border-radius: 20px;
+  }
 }
 
 /* ------------- LISTE ------------ */
