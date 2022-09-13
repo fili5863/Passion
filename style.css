@@ -122,6 +122,15 @@ p {
 .beskrivelse {
   grid-column: span 2;
 }
+.stand {
+  text-align: end;
+  margin-top: 15px;
+  font-style: italic;
+}
+.køn {
+  margin-top: 15px;
+  color: #e0ae5d;
+}
 
 #liste img {
   max-width: 400px;
