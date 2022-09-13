@@ -139,6 +139,7 @@ p {
 .køn {
   text-align: end;
   color: #e0ae5d;
+  align-self: center;
 }
 
 #liste img {
