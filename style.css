@@ -41,6 +41,16 @@ img {
 
 .billedeurl {
   grid-column: span 2;
+  margin-bottom: 1.25rem;
+}
+
+.navn,
+.pris {
+  margin-bottom: 0.4rem;
+}
+
+p {
+  color: #5b604d;
 }
 
 .navn {
@@ -49,8 +59,9 @@ img {
   font-size: 1.4rem;
   font-family: helvetica;
   padding-block-start: 5px;
-  color: #575c4a;
+  color: #4e5342;
 }
+
 .pris {
   grid-column: 2/3;
   justify-self: end;
@@ -59,6 +70,7 @@ img {
   font-style: italic;
   font-size: 1.1rem;
 }
+
 .type {
   grid-column: 1/2;
 }
@@ -92,11 +104,11 @@ img {
   grid-gap: 5px;
   grid-template-columns: repeat(2, 1fr);
   margin: 4rem auto;
+  /* margin-top: 10rem; */
   place-self: center center;
   height: fit-content;
-  border-radius: 25px;
-  padding: 12px;
-  background-color: white;
+  padding: 50px;
+  background-color: #f4eddf;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -133,16 +145,21 @@ article button:hover {
   padding-inline: 28.5px;
 }
 
+#koeb {
+  margin-top: 1.5rem;
+}
+
 footer {
   background-color: #575c4a;
   color: #fff;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   height: 30px;
-  padding-block: 5px;
+  padding-block: 20px;
   margin-block-start: 100px;
   align-self: flex-end;
 }
+
 /* -------------- MENU ----------------*/
 header {
   position: fixed;
