@@ -14,7 +14,7 @@ let filter = "alle";
 /* Variabel "filterknapper" med værdien af alle punkter fra navigationen. Tilføjet klik element 
 på alle knapper. Når der klikkes på kanppen hentes data. */
 const filterKnapper = document.querySelectorAll("nav li");
-filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerKategorier));
+filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategorier));
 hentData();
 
 /* Funktionen "filterKategorier" gør at dataen bliver filtreret når der klikkes på en bestemt
@@ -38,7 +38,7 @@ function vis(data) {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
-  data.forEach((sko) => {
+  data.forEach(sko => {
     if (filter == sko.type || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
@@ -60,7 +60,10 @@ function visDetaljer(sko) {
   popup.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
   popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
   popup.querySelector(".pris").textContent = sko.pris + "kr.";
-  document.querySelector("#popup article").addEventListener("click", () => (popup.style.display = "none"));
+  popup.querySelector(".størrelse").textContent = "Str. " + sko.størrelse;
+  document
+    .querySelector("#popup article")
+    .addEventListener("click", () => (popup.style.display = "none"));
 }
 
 hentData();
