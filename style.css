@@ -11,7 +11,7 @@ body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -20px;
+  margin-bottom: -38.5px;
 }
 body {
   background-color: #f4eddf;
@@ -23,10 +23,12 @@ img {
 
 footer {
   background-color: #575c4a;
-  color: #fff;
+}
+footer p {
+  padding: 10px;
+  color: #f4eddf;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  height: 20px;
 }
 
 .push {
