@@ -124,11 +124,10 @@ p {
 }
 .stand {
   text-align: end;
-  margin-top: 15px;
   font-style: italic;
 }
 .køn {
-  margin-top: 15px;
+  text-align: end;
   color: #e0ae5d;
 }
 

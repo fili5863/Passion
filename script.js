@@ -47,8 +47,8 @@ function vis(data) {
       klon.querySelector(".navn").textContent = sko.navn;
       // klon.querySelector(".type").textContent = sko.type;
       klon.querySelector(".størrelse").textContent = "Str. " + sko.størrelse;
-      klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
       klon.querySelector(".køn").textContent = sko.køn;
+      klon.querySelector(".type").textContent = sko.type;
       klon.querySelector(".stand").textContent = sko.stand;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
       klon.querySelector("article").addEventListener("click", () => visDetaljer(sko));
