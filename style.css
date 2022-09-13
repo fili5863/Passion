@@ -44,6 +44,12 @@ footer p {
 
 #splashbillede {
   border-radius: 20px;
+  background-image: url(/splashbilled/splashbilled3.png);
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /* ------------- LISTE ------------ */
