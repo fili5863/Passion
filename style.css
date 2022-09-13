@@ -187,6 +187,10 @@ p {
 .popbeskrivelse {
   grid-column: 1/3;
 }
+
+.popstand {
+  padding-block-start: 10px;
+}
 article button {
   all: unset;
   justify-self: center;
