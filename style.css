@@ -21,29 +21,83 @@ img {
   max-width: 100%;
 }
 
+/* -------------- MENU ----------------*/
+header {
+  position: fixed;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #7b806a;
+  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.276));
+  padding: 5px;
+}
+
+.nav1 {
+  width: 80px;
+  margin-block: 0.5rem;
+  margin-left: 1rem;
+}
+
+.nav2 {
+  grid-column: 3/11;
+  align-self: center;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding-left: unset;
+  gap: 20px;
+}
+
+li {
+  background-color: #575c4a;
+  color: #ffff;
+  padding: 7px;
+  padding-inline: 30px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #7b806a;
+  color: #ffff;
+  transition: 50ms;
+  border: 1.5px solid #fff;
+  padding: 5.5px;
+  padding-inline: 28.5px;
+}
+
+.valgt {
+  background-color: #e0ae5d;
+}
+
 footer {
   background-color: #575c4a;
 }
-footer p {
-  padding: 10px;
-  color: #f4eddf;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.push {
-  height: 90px;
-}
-
+/* -------------- SPLASH-BILLEDE ----------------*/
 .splash {
   max-width: 1500px;
-
   margin: 0 auto;
   margin-block: 50px;
 }
 
 #splashbillede {
   border-radius: 20px;
+}
+
+/* -------------- KATEGORI-OVERSKRIFT ----------------*/
+.h1class {
+  display: grid;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding-top: 140px;
+  text-align: center;
+  font-family: "playfair display";
+  font-size: 2rem;
+  color: #575c4a;
 }
 
 /* ------------- LISTE ------------ */
@@ -58,15 +112,16 @@ footer p {
   padding-inline: 10px;
 }
 
-.h1class {
-  display: grid;
-  margin: 0 auto;
-  max-width: 1300px;
-  padding-top: 140px;
+/* ------------- FOOTER ------------ */
+footer p {
+  padding: 1.1rem;
+  color: #f4eddf;
   text-align: center;
-  font-family: "playfair display";
-  font-size: 2rem;
-  color: #575c4a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.push {
+  height: 90px;
 }
 
 @media (min-width: 1300px) {
@@ -216,56 +271,4 @@ article button:hover {
 
 #koeb {
   margin-top: 1.5rem;
-}
-
-/* -------------- MENU ----------------*/
-header {
-  position: fixed;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  background-color: #7b806a;
-  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.276));
-  padding: 5px;
-}
-
-.nav1 {
-  width: 80px;
-  margin-block: 0.5rem;
-  margin-left: 1rem;
-}
-
-.nav2 {
-  grid-column: 3/11;
-  align-self: center;
-}
-ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  padding-left: unset;
-  gap: 20px;
-}
-
-li {
-  background-color: #575c4a;
-  color: #ffff;
-  padding: 7px;
-  padding-inline: 30px;
-  border-radius: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-}
-
-li:hover {
-  background-color: #7b806a;
-  color: #ffff;
-  transition: 50ms;
-  border: 1.5px solid #fff;
-  padding: 5.5px;
-  padding-inline: 28.5px;
-}
-
-.valgt {
-  background-color: #e0ae5d;
 }
