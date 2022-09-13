@@ -32,7 +32,7 @@ footer {
 .push {
   height: 90px;
 }
-
+/* ------------- SPLASH MOBIL ---------------*/
 .splash {
   display: grid;
   margin: 0 auto;
@@ -40,14 +40,20 @@ footer {
 }
 .splash img {
   margin-block-start: 91px;
+  display: grid;
+  width: 100%;
+  height: clamp(500px, 10%, 20vh);
 }
 .splashbtn {
   background-color: #7b806a;
-  border: 2px solid #f4eddf;
-  padding: 7px;
+  border: 3px solid #4c483f;
+  padding: 15px;
+  padding-inline: 40px;
   color: #f4eddf;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
+  place-self: center;
+  margin-block-start: 10px;
 }
 
 @media (min-width: 1300px) {
@@ -88,6 +94,7 @@ footer {
     font-size: 20px;
     font-weight: 400;
     margin: 20px;
+    padding: 10px 25px;
     outline: none;
     outline: 0;
     text-align: center;
