@@ -65,6 +65,7 @@ function visDetaljer(sko) {
   popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
   popup.querySelector(".pris").textContent = sko.pris + "kr.";
   popup.querySelector(".størrelse").textContent = "Str. " + sko.størrelse;
+  popup.querySelector(".standpop").textContent = sko.stand;
   document.querySelector("#popup article").addEventListener("click", () => (popup.style.display = "none"));
 }
 

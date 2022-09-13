@@ -128,17 +128,21 @@ p {
 .størrelse {
   margin-block: 5px;
   font-weight: bold;
+  text-align: end;
 }
 .beskrivelse {
   grid-column: span 2;
 }
-.stand {
+.stand,
+.standpop {
   text-align: end;
   font-style: italic;
 }
+
 .køn {
-  text-align: end;
   color: #e0ae5d;
+  margin-block: 5px;
+  font-weight: bold;
 }
 
 #liste img {
