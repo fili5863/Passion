@@ -11,7 +11,7 @@ body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -38.5px;
+  margin-bottom: -20px;
 }
 body {
   background-color: #f4eddf;
@@ -23,12 +23,10 @@ img {
 
 footer {
   background-color: #575c4a;
-}
-footer p {
-  padding: 10px;
-  color: #f4eddf;
+  color: #fff;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  height: 20px;
 }
 
 .push {
@@ -37,6 +35,7 @@ footer p {
 
 .splash {
   max-width: 1500px;
+
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -91,6 +90,9 @@ button:hover {
   button {
     padding: 10px 30px;
   }
+
+#splashbillede {
+  border-radius: 20px;
 }
 
 /* ------------- LISTE ------------ */
@@ -315,4 +317,48 @@ li:hover {
 
 .valgt {
   background-color: #e0ae5d;
+}
+
+/* burgermenu */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  display: none; /* Skjul knappen som standard */
+}
+
+@media (max-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .toggle-btn {
+    display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+  }
+
+  .nav2 {
+    display: contents;
+    /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+  }
+
+  .nav2 ul {
+    display: none; /* Fjern menu-listen som standard */
+  }
+
+  .nav2.shown ul {
+    /* Vis menu-listen, når klassen ".shown" er til stede */
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
 }
