@@ -14,53 +14,69 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="popup">
-      <article>
-        <img class="billedeurl" src="" alt="" />
-        <h3 class="popnavn"><span class="navn"></span></h3>
-        <p class="poppris"><span class="pris"></span></p>
-        <p><span class="type"></span></p>
-        <p><span class="Køn"></span></p>
-        <p><span class="størrelse"></span></p>
-        <p class="popbeskrivelse"><span class="beskrivelse"></span></p>
+    <div class="wrapper">
+      <section id="popup">
+        <article>
+          <img class="billedeurl" src="" alt="" />
+          <h3 class="popnavn"><span class="navn"></span></h3>
+          <p class="poppris"><span class="pris"></span></p>
+          <p><span class="type"></span></p>
+          <p><span class="Køn"></span></p>
+          <p><span class="størrelse"></span></p>
+          <p class="popbeskrivelse"><span class="beskrivelse"></span></p>
 
-        <button id="koeb">Læg i kurv</button>
-      </article>
-    </section>
-    <header>
-      <nav class="nav1">
-        <img src="logo.svg" alt="" srcset="" />
-      </nav>
-      <nav class="nav2">
-        <ul>
-          <li data-type="alle" class="valgt">Alle</li>
-          <li data-type="Sneakers">Sneakers</li>
-          <li data-type="Pæne sko">Pæne sko</li>
-          <li data-type="Støvler">Støvler</li>
-          <li data-type="Sandaler">Sandaler</li>
-        </ul>
-      </nav>
-    </header>
+          <button id="koeb">Læg i kurv</button>
+        </article>
+      </section>
+      <header>
+        <nav class="nav1">
+          <img src="logo.svg" alt="" srcset="" />
+        </nav>
+        <nav class="nav2">
+          <ul>
+            <li data-type="alle" class="valgt">Alle</li>
+            <li data-type="Sneakers">Sneakers</li>
+            <li data-type="Pæne sko">Pæne sko</li>
+            <li data-type="Støvler">Støvler</li>
+            <li data-type="Sandaler">Sandaler</li>
+          </ul>
+        </nav>
+      </header>
 
-    <section class="h1class">
-      <h1>Alle</h1>
-    </section>
+      <section class="h1class">
+        <h1>Alle</h1>
+      </section>
 
-    <main id="liste"></main>
+      <main id="liste"></main>
 
-    <template>
-      <article>
-        <img class="billedeurl" src="" alt="" />
-        <h3 class="navn"></h3>
-        <p class="pris"></p>
-        <p class="størrelse"></p>
-        <p class="type"></p>
-        <p class="beskrivelse"></p>
-        <p class="køn"></p>
-        <p class="stand"></p>
-      </article>
-    </template>
-    <footer>Gruppe 8 - Passion</footer>
+      <template>
+        <article>
+          <img class="billedeurl" src="" alt="" />
+          <h3 class="navn"></h3>
+          <p class="pris"></p>
+          <p class="størrelse"></p>
+          <p class="køn"></p>
+          <p class="type"></p>
+          <p class="stand"></p>
+        </article>
+      </template>
+
+      <template>
+        <article>
+          <img class="billedeurl" src="" alt="" />
+          <h3 class="navn"></h3>
+          <p class="pris"></p>
+          <p class="størrelse"></p>
+          <p class="type"></p>
+          <p class="beskrivelse"></p>
+          <p class="køn"></p>
+          <p class="stand"></p>
+        </article>
+      </template>
+
+      <div class="push"></div>
+    </div>
+    <footer class="footer">Gruppe 8 - Passion</footer>
 
     <script src="script.js"></script>
   </body>
