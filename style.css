@@ -11,10 +11,20 @@ img {
 #liste {
   max-width: 1300px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 3em;
   padding-top: 200px;
+  justify-content: space-around;
+  padding-inline: 10px;
+}
+
+@media (min-width: 1300px) {
+  #liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding-inline: unset;
+  }
 }
 
 #liste article {
@@ -22,7 +32,7 @@ img {
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 .billedeurl {
@@ -31,19 +41,30 @@ img {
 
 .navn {
   grid-column: 1/2;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-family: helvetica;
+  padding-block-start: 5px;
+  color: #575c4a;
 }
 .pris {
   grid-column: 2/3;
   justify-self: end;
   align-self: flex-end;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
 }
 .type {
   grid-column: 1/2;
 }
+
+.størrelse {
+  margin-block: 5px;
+  font-weight: bold;
+}
 .beskrivelse {
   grid-column: span 2;
-  margin-block-start: 10px;
 }
 
 #liste img {
@@ -62,12 +83,12 @@ img {
 }
 
 #popup article {
-  max-width: 30vw;
+  width: clamp(50vw, 500px, 70vh);
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(2, 1fr);
   margin: 4rem auto;
-  margin-block-start: 200px;
+  place-self: center center;
   height: fit-content;
   border-radius: 25px;
   padding: 12px;
@@ -82,6 +103,7 @@ img {
 .poppris {
   grid-column: 2 / 3;
   justify-self: end;
+  align-self: flex-end;
 }
 .popbeskrivelse {
   grid-column: 1/3;
@@ -105,6 +127,17 @@ article button:hover {
   border: 1.5px solid #fff;
   padding: 5.5px;
   padding-inline: 28.5px;
+}
+
+footer {
+  background-color: #575c4a;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30px;
+  padding-block: 5px;
+  margin-block-start: 100px;
+  align-self: flex-end;
 }
 /* -------------- MENU ----------------*/
 header {

@@ -44,7 +44,7 @@ function vis(data) {
       klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
       klon.querySelector(".navn").textContent = sko.navn;
       // klon.querySelector(".type").textContent = sko.type;
-      // klon.querySelector(".størrelse").textContent = sko.størrelse;
+      klon.querySelector(".størrelse").textContent = "Str. " + sko.størrelse;
       klon.querySelector(".beskrivelse").textContent = sko.beskrivelse;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
       klon.querySelector("article").addEventListener("click", () => visDetaljer(sko));
