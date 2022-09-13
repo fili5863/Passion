@@ -118,32 +118,6 @@ footer {
   padding-inline: 10px;
 }
 
-/* ------------- FOOTER ------------ */
-footer p {
-  padding: 1.1rem;
-  color: #f4eddf;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.push {
-  height: 90px;
-}
-
-@media (min-width: 1300px) {
-  /* Sætter liste i grid */
-  #liste {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    padding-inline: unset;
-  }
-  /* Tilføjer effekt på h1 */
-  .h1class {
-    margin-inline-start: 160px;
-    text-align: left;
-  }
-}
-
 #liste article {
   max-width: 400px;
   justify-content: center;
@@ -193,14 +167,17 @@ p {
   font-weight: bold;
   text-align: end;
 }
+
 .beskrivelse {
   grid-column: span 2;
 }
+
 .stand,
 .standpop {
   text-align: end;
   font-style: italic;
 }
+
 .køn {
   color: #e0ae5d;
   margin-block: 5px;
@@ -211,7 +188,34 @@ p {
 #liste img {
   max-width: 400px;
 }
-/* popup */
+
+/* ------------- FOOTER ------------ */
+footer p {
+  padding: 1.1rem;
+  color: #f4eddf;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.push {
+  height: 90px;
+}
+
+@media (min-width: 1300px) {
+  /* Sætter liste i grid */
+  #liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding-inline: unset;
+  }
+  /* Tilføjer effekt på h1 */
+  .h1class {
+    margin-inline-start: 160px;
+    text-align: left;
+  }
+}
+
+/* ------------- POP-UP ---------------*/
 #popup {
   display: none;
   position: fixed;
@@ -253,6 +257,7 @@ p {
 .popstand {
   padding-block-start: 10px;
 }
+
 article button {
   all: unset;
   justify-self: center;
