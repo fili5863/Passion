@@ -51,12 +51,12 @@
   }
 
   .splashbtn {
-    background-color: #7b806a;
+    background-color: #f4eddf;
     border: 8px solid #f4eddf;
     border-radius: 40px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #7b806a;
     cursor: pointer;
     font-family: Helvetica, sans-serif;
     font-size: 20px;
