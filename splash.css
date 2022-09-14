@@ -8,6 +8,7 @@
   display: grid;
   width: 100%;
 }
+
 .splashbtn {
   background-color: #7b806a;
   border: 3px solid #4c483f;
@@ -16,6 +17,7 @@
   color: #f4eddf;
   border-radius: 15px;
   cursor: pointer;
+  place-self: center;
   text-decoration: none;
 }
 
