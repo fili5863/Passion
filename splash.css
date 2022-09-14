@@ -2,17 +2,18 @@
 .splash {
   margin-top: 0 auto;
   max-width: 100%;
-  display: grid;
-}
-.splash img {
+  height: 100vh;
+  background-image: url("splashbilled/splashbillede7.png");
+  background-position: center;
+  background-size: cover;
   display: flex;
-  width: 100%;
+  justify-content: space-evenly;
 }
+
 .splashbtn {
   background-color: #7b806a;
   border: 3px solid #4c483f;
   padding: 15px;
-  padding-inline: 40px;
   color: #f4eddf;
   border-radius: 15px;
   cursor: pointer;
@@ -23,7 +24,11 @@
 }
 
 .knapper {
-  justify-self: center;
+  place-self: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 @media (min-width: 1000px) {

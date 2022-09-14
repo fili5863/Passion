@@ -138,9 +138,6 @@ p {
   align-self: center;
 }
 
-#liste img {
-  max-width: 400px;
-}
 /* popup */
 #popup {
   display: none;
