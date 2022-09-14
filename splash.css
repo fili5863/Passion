@@ -75,8 +75,8 @@
   }
 
   .splashbtn:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
-    transform: translateY(-10px);
+    box-shadow: rgb(58, 66, 45) 0 10px 9px 0;
+    transform: translateY(-15px);
   }
   .splashbtn {
     padding: 10px 30px;
