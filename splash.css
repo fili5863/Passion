@@ -8,7 +8,6 @@
   display: flex;
   width: 100%;
 }
-
 .splashbtn {
   background-color: #7b806a;
   border: 3px solid #4c483f;
@@ -19,6 +18,8 @@
   cursor: pointer;
   place-self: center;
   text-decoration: none;
+  font-variant: all-small-caps;
+  font-family: Helvetica, sans-serif;
 }
 
 .knapper {
