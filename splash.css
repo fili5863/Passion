@@ -8,6 +8,11 @@
   display: grid;
   width: 100%;
 }
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 20px;
+}
 .splashbtn {
   background-color: #7b806a;
   border: 3px solid #4c483f;
@@ -19,6 +24,7 @@
   place-self: center;
   text-decoration: none;
 }
+
 #doner {
   margin-block-start: 10px;
 }
