@@ -1,4 +1,9 @@
 /* ------------- GENEREL ---------------*/
+:root {
+  --hvid: #f4eddf;
+  --mørk: #575c4a;
+  --lys: #7b806a;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +19,7 @@ body {
   margin-bottom: -20px;
 }
 body {
-  background-color: #f4eddf;
+  background-color: var(--hvid);
 }
 
 img {
@@ -22,8 +27,8 @@ img {
 }
 
 footer {
-  background-color: #575c4a;
-  color: #f4eddf;
+  background-color: var(--mørk);
+  color: var(--hvid);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   height: 20px;
@@ -32,6 +37,98 @@ footer {
 .push {
   height: 90px;
 }
+<<<<<<< HEAD
+=======
+/* ------------- SPLASH MOBIL ---------------*/
+@media (max-width: 800px) {
+  .splash {
+    display: grid;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .splash img {
+    margin-block-start: 91px;
+    display: grid;
+    width: 100%;
+  }
+  .splashbtn {
+    background-color: var(--lys);
+    border: 3px solid #4c483f;
+    padding: 15px;
+    padding-inline: 40px;
+    color: var(--hvid);
+    border-radius: 15px;
+    cursor: pointer;
+    place-self: center;
+    margin-block-start: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .splash {
+    max-width: 1500px;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4fr 1fr;
+    place-content: center left;
+  }
+  .splash img {
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / span 4;
+    grid-row: 1 / 3;
+  }
+  #doner {
+    grid-column: 4 / 5;
+    grid-row: 2;
+  }
+  #udvalg {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+  .splashbtn {
+    background-color: var(--lys);
+    border: 12px solid var(--hvid);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px;
+    padding: 10px 25px;
+    outline: none;
+    outline: 0;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .splashbtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 9px 0;
+    transform: translateY(-10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .splashbtn {
+    padding: 10px 30px;
+  }
+
+  #splashbillede {
+    border-radius: 20px;
+  }
+}
+>>>>>>> 1a0ae9ca63f35732e862dfc0151d6573ff7b43cd
 
 /* ------------- LISTE ------------ */
 #liste {
@@ -53,7 +150,7 @@ footer {
   text-align: center;
   font-family: "playfair display";
   font-size: 2rem;
-  color: #575c4a;
+  color: var(--mørk);
 }
 
 @media (min-width: 1300px) {
@@ -65,7 +162,7 @@ footer {
   }
   /* Tilføjer effekt på h1 */
   .h1class {
-    margin-inline-start: 160px;
+    /*     margin-inline-start: 160px; */
     text-align: left;
   }
 }
@@ -159,7 +256,7 @@ p {
   place-self: center center;
   height: fit-content;
   padding: 50px;
-  background-color: #f4eddf;
+  background-color: var(--hvid);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -183,8 +280,8 @@ article button {
   all: unset;
   justify-self: center;
   grid-column: 1/3;
-  background-color: #575c4a;
-  color: #f4eddf;
+  background-color: var(--mørk);
+  color: var(--hvid);
   padding: 7px;
   padding-inline: 30px;
   border-radius: 20px;
@@ -193,10 +290,10 @@ article button {
 }
 
 article button:hover {
-  background-color: #7b806a;
-  color: #f4eddf;
+  background-color: var(--lys);
+  color: var(--hvid);
   transition: 50ms;
-  border: 1.5px solid #f4eddf;
+  border: 1.5px solid var(--hvid);
   padding: 5.5px;
   padding-inline: 28.5px;
 }
@@ -211,7 +308,7 @@ header {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: #7b806a;
+  background-color: var(--lys);
   filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.276));
   padding: 5px;
 }
@@ -235,8 +332,8 @@ ul {
 }
 
 li {
-  background-color: #575c4a;
-  color: #f4eddf;
+  background-color: var(--mørk);
+  color: var(--hvid);
   padding: 7px;
   padding-inline: 30px;
   border-radius: 20px;
@@ -245,10 +342,10 @@ li {
 }
 
 li:hover {
-  background-color: #7b806a;
-  color: #f4eddf;
+  background-color: var(--lys);
+  color: var(--hvid);
   transition: 50ms;
-  border: 1.5px solid #f4eddf;
+  border: 1.5px solid var(--hvid);
   padding: 5.5px;
   padding-inline: 28.5px;
 }
@@ -280,7 +377,7 @@ li:hover {
 
   .toggle-btn {
     display: block;
-    color: #f4eddf;
+    color: var(--hvid);
     font-family: Helvetica, sans-serif; /* Vis knappen, når viewporten maksimalt er 600px */
   }
 
@@ -295,7 +392,7 @@ li:hover {
 
   .nav2.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
-    border-top: 2px solid #f4eddf;
+    border-top: 2px solid var(--hvid);
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
