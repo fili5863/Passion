@@ -4,8 +4,7 @@
   max-width: 100%;
   display: block;
 }
-
-.splashimg {
+.splash img {
   display: grid;
   width: 100%;
 }
@@ -26,17 +25,6 @@
   text-decoration: none;
 }
 
-#doner {
-  margin-block-start: 10px;
-}
-#udvalg {
-  margin-block: 10px;
-  margin-block-end: 10px;
-}
-footer {
-  margin-top: 20px;
-}
-
 @media (min-width: 1000px) {
   .splash {
     max-width: none;
@@ -47,7 +35,7 @@ footer {
     grid-template-rows: 4fr 1fr;
     place-content: center left;
   }
-  .splashimg {
+  .splash img {
     max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
