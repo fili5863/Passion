@@ -18,6 +18,7 @@
   border-radius: 15px;
   cursor: pointer;
   place-self: center;
+  text-decoration: none;
 }
 #doner {
   margin-block-start: 10px;
