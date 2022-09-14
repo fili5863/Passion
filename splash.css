@@ -4,7 +4,7 @@
   margin-top: 0 auto;
   max-width: 100%;
   height: 100vh;
-  background-image: url("splashbilled/splashbillede7.png");
+  background-image: url("splashbilled/splashbillede8.png");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -13,7 +13,6 @@
 
 .splashbtn {
   background-color: #f4eddf;
-  border: 8px solid #f4eddf;
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
   box-sizing: border-box;
@@ -32,6 +31,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  text-decoration: none;
 }
 
 .knapper {
