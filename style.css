@@ -159,7 +159,7 @@ footer {
   }
   /* Tilføjer effekt på h1 */
   .h1class {
-    margin-inline-start: 160px;
+    /*     margin-inline-start: 160px; */
     text-align: left;
   }
 }
