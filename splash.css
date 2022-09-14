@@ -33,7 +33,7 @@ footer {
 
 @media (min-width: 1000px) {
   .splash {
-    max-width: 1500px;
+    max-width: none;
     height: 100vh;
     margin: 0 auto;
     display: grid;
