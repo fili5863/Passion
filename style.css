@@ -1,4 +1,9 @@
 /* ------------- GENEREL ---------------*/
+:root {
+  --hvid: #f4eddf;
+  --mørk: #575c4a;
+  --lys: #7b806a;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +19,7 @@ body {
   margin-bottom: -20px;
 }
 body {
-  background-color: #f4eddf;
+  background-color: var(--hvid);
 }
 
 img {
@@ -22,8 +27,8 @@ img {
 }
 
 footer {
-  background-color: #575c4a;
-  color: #f4eddf;
+  background-color: var(--mørk);
+  color: var(--hvid);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   height: 20px;
@@ -45,11 +50,11 @@ footer {
     width: 100%;
   }
   .splashbtn {
-    background-color: #7b806a;
+    background-color: var(--lys);
     border: 3px solid #4c483f;
     padding: 15px;
     padding-inline: 40px;
-    color: #f4eddf;
+    color: var(--hvid);
     border-radius: 15px;
     cursor: pointer;
     place-self: center;
@@ -84,8 +89,8 @@ footer {
     grid-row: 2;
   }
   .splashbtn {
-    background-color: #7b806a;
-    border: 12px solid #f4eddf;
+    background-color: var(--lys);
+    border: 12px solid var(--hvid);
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
     box-sizing: border-box;
@@ -142,7 +147,7 @@ footer {
   text-align: center;
   font-family: "playfair display";
   font-size: 2rem;
-  color: #575c4a;
+  color: var(--mørk);
 }
 
 @media (min-width: 1300px) {
@@ -248,7 +253,7 @@ p {
   place-self: center center;
   height: fit-content;
   padding: 50px;
-  background-color: #f4eddf;
+  background-color: var(--hvid);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -272,8 +277,8 @@ article button {
   all: unset;
   justify-self: center;
   grid-column: 1/3;
-  background-color: #575c4a;
-  color: #f4eddf;
+  background-color: var(--mørk);
+  color: var(--hvid);
   padding: 7px;
   padding-inline: 30px;
   border-radius: 20px;
@@ -282,10 +287,10 @@ article button {
 }
 
 article button:hover {
-  background-color: #7b806a;
-  color: #f4eddf;
+  background-color: var(--lys);
+  color: var(--hvid);
   transition: 50ms;
-  border: 1.5px solid #f4eddf;
+  border: 1.5px solid var(--hvid);
   padding: 5.5px;
   padding-inline: 28.5px;
 }
@@ -300,7 +305,7 @@ header {
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background-color: #7b806a;
+  background-color: var(--lys);
   filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.276));
   padding: 5px;
 }
@@ -324,8 +329,8 @@ ul {
 }
 
 li {
-  background-color: #575c4a;
-  color: #f4eddf;
+  background-color: var(--mørk);
+  color: var(--hvid);
   padding: 7px;
   padding-inline: 30px;
   border-radius: 20px;
@@ -334,10 +339,10 @@ li {
 }
 
 li:hover {
-  background-color: #7b806a;
-  color: #f4eddf;
+  background-color: var(--lys);
+  color: var(--hvid);
   transition: 50ms;
-  border: 1.5px solid #f4eddf;
+  border: 1.5px solid var(--hvid);
   padding: 5.5px;
   padding-inline: 28.5px;
 }
@@ -369,7 +374,7 @@ li:hover {
 
   .toggle-btn {
     display: block;
-    color: #f4eddf;
+    color: var(--hvid);
     font-family: Helvetica, sans-serif; /* Vis knappen, når viewporten maksimalt er 600px */
   }
 
@@ -384,7 +389,7 @@ li:hover {
 
   .nav2.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
-    border-top: 2px solid #f4eddf;
+    border-top: 2px solid var(--hvid);
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
