@@ -12,16 +12,26 @@
 }
 
 .splashbtn {
-  background-color: #7b806a;
-  border: 3px solid #4c483f;
-  padding: 15px;
-  color: #f4eddf;
-  border-radius: 15px;
+  background-color: #f4eddf;
+  border: 8px solid #f4eddf;
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #7b806a;
   cursor: pointer;
-  place-self: center;
-  text-decoration: none;
-  font-variant: all-small-caps;
   font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px;
+  padding: 20px 25px;
+  outline: none;
+  outline: 0;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .knapper {
