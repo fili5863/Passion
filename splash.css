@@ -7,9 +7,8 @@
 }
 .splash img {
   display: flex;
-  background-size: 100%;
+  width: 100%;
 }
-
 .splashbtn {
   background-color: #7b806a;
   border: 3px solid #4c483f;
