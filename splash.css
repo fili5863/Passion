@@ -2,10 +2,10 @@
 .splash {
   margin-top: 0 auto;
   max-width: 100%;
-  display: block;
+  display: grid;
 }
 .splash img {
-  display: grid;
+  display: absolute;
   width: 100%;
 }
 .splashbtn {
