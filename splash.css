@@ -1,10 +1,11 @@
 /* ------------- SPLASH MOBIL ---------------*/
 .splash {
-  margin: 0 auto;
+  margin-top: 0 auto;
   max-width: 100%;
-  display: grid;
+  display: block;
 }
 .splashimg {
+  margin-block-start: 92px;
   display: grid;
   width: 100%;
 }
