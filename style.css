@@ -104,11 +104,6 @@ footer wrapper {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     padding-inline: unset;
   }
-  /* Tilføjer effekt på h1 */
-  .h1class {
-    /*     margin-inline-start: 160px; */
-    text-align: left;
-  }
 }
 
 #liste article {
