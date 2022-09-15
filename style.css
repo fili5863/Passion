@@ -169,7 +169,7 @@ p {
   font-style: italic;
 }
 .køn {
-  color: #e0ae5d;
+  color: #7b806a;
   margin-block: 5px;
   font-weight: bold;
   align-self: center;
@@ -293,18 +293,23 @@ li:hover {
 
 .valgt {
   background-color: #e0ae5d;
+  color: var(--mørk);
 }
 
 /* burgermenu */
-.toggle-btn {
-  background: transparent;
-  border: none;
-  min-width: 44px;
-  min-height: 44px;
-  font-size: 1.1rem;
-  cursor: pointer;
-
-  display: none; /* Skjul knappen som standard */
+.container {
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  border: solid 1px var(--hvid);
+  border-radius: 2.5px;
+  background-color: var(--hvid);
+  margin: 6px 0;
+  transition: 0.2s;
 }
 
 @media (max-width: 1300px) {
@@ -316,15 +321,29 @@ li:hover {
     flex-wrap: wrap;
   }
 
-  .toggle-btn {
-    display: block;
-    color: var(--hvid);
-    font-family: Helvetica, sans-serif; /* Vis knappen, når viewporten maksimalt er 600px */
+  .container {
+    display: inline-block;
+    cursor: pointer;
+    margin-inline-end: 1rem;
+  }
+
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
   }
 
   .nav2 {
     display: contents;
-    /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
   }
 
   .nav2 ul {
@@ -340,8 +359,7 @@ li:hover {
     flex-flow: column;
     padding-block-end: 10px;
   }
-
   footer wrapper {
-    padding-inline: 1rem;
+    padding: 1rem;
   }
 }
