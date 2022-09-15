@@ -15,7 +15,9 @@ const overskrift = document.querySelector("section h1");
 /* Variabel "filterknapper" med værdien af alle punkter fra navigationen. Tilføjet klik element 
 på alle knapper. Når der klikkes på kanppen hentes data. */
 const filterKnapper = document.querySelectorAll("nav li");
-filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKategorier));
+filterKnapper.forEach((knap) =>
+  knap.addEventListener("click", filtrerKategorier)
+);
 hentData();
 
 /* Funktionen "filterKategorier" gør at dataen bliver filtreret når der klikkes på en bestemt
@@ -40,10 +42,11 @@ function vis(data) {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
-  data.forEach(sko => {
+  data.forEach((sko) => {
     if (filter == sko.type || filter == "alle") {
       const klon = template.cloneNode(true);
-      klon.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
+      klon.querySelector(".billedeurl").src =
+        "skogalleri/" + sko.billedetekst + ".webp";
       klon.querySelector(".navn").textContent = sko.navn;
       // klon.querySelector(".type").textContent = sko.type;
       klon.querySelector(".størrelse").textContent = "Str. " + sko.størrelse;
@@ -51,7 +54,9 @@ function vis(data) {
       klon.querySelector(".type").textContent = sko.type;
       klon.querySelector(".stand").textContent = sko.stand;
       klon.querySelector(".pris").textContent = sko.pris + "kr.";
-      klon.querySelector("article").addEventListener("click", () => visDetaljer(sko));
+      klon
+        .querySelector("article")
+        .addEventListener("click", () => visDetaljer(sko));
       main.appendChild(klon);
     }
   });
@@ -61,7 +66,8 @@ const popup = document.querySelector("#popup");
 function visDetaljer(sko) {
   popup.style.display = "flex";
   popup.querySelector(".navn").textContent = sko.navn;
-  popup.querySelector(".billedeurl").src = "skogalleri/" + sko.billedetekst + ".webp";
+  popup.querySelector(".billedeurl").src =
+    "skogalleri/" + sko.billedetekst + ".webp";
   popup.querySelector(".beskrivelse").textContent = sko.beskrivelse;
   popup.querySelector(".pris").textContent = sko.pris + "kr.";
   popup.querySelector(".størrelse").textContent = "Str. " + sko.størrelse;
@@ -74,18 +80,27 @@ function visDetaljer(sko) {
 hentData();
 
 // Lav variablen "btn", der henviser til ".toggle-btn"
-const btn = document.querySelector(".container");
+const btn = document.querySelector(".toggle-btn");
 // Lav variablen "menu", der henviser til ".main-menu"
 const menu = document.querySelector(".nav2");
 
 // Lav funktionen "toggleMenu()" med følgende funktionalitet
 function toggleMenu() {
-  // a) toggle klassen "change" på knappen
-  btn.classList.toggle("change");
-  // b) toggle klassen "shown" på menu vha. classList.toggle
+  // a) toggle klassen "shown" på menu vha. classList.toggle
   menu.classList.toggle("shown");
-  // v) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
+  // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
   const menuShown = menu.classList.contains("shown");
+  // c) spørg om "menuShown" i if-sætningen nedenfor (=> if (menuShown)), og udskift teksten
+  if (menuShown) {
+    console.log(menuShown); // se i konsollen
+    // sæt btn.textContent til "Luk", hvis menuShown er "true"
+    btn.textContent = "Luk";
+  } else {
+    console.log(menuShown); // se i konsollen
+    // sæt btn.textContent til "Menu", hvis menuShown er "false"
+    btn.textContent = "Menu";
+  }
+  // "toggleMenu()" slutter her
 }
 
 // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
