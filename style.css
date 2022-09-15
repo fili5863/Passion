@@ -42,7 +42,7 @@ footer wrapper {
   padding-block-end: 2rem;
 }
 
-.kontakt {
+.kontaktfooter {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -53,10 +53,10 @@ footer wrapper {
   max-width: 1300px;
 }
 
-.kontakt p {
+.kontaktfooter p {
   color: #f4eddf;
 }
-.kontakt p span {
+.kontaktfooter p span {
   font-weight: bold;
 }
 
