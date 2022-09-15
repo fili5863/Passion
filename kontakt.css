@@ -37,6 +37,14 @@ h3 {
 section {
   margin-block-end: 40px;
 }
+figure {
+  margin-block-end: 40px;
+}
+.gruppeimg {
+  max-width: 100%;
+  margin-inline: 60px;
+}
+
 @media (max-width: 700px) {
   .om-container {
     display: block;
