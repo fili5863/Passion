@@ -63,6 +63,7 @@ footer wrapper {
 .medier {
   display: flex;
   align-self: flex-start;
+
   gap: 1rem;
   flex-direction: row;
 }
