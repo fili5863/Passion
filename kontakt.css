@@ -16,7 +16,6 @@
 .kontaktbillede {
   grid-column: 4 / 6;
   grid-row: span 2;
-  width: 100%;
 }
 .om-os {
   grid-column: 2 / 4;
