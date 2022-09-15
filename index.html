@@ -10,23 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_io/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
     <link rel="manifest" href="favicon_io/site.webmanifest" />
     <title>Footprint</title>
     <link rel="stylesheet" href="style.css" />
@@ -49,10 +35,14 @@
       </section>
       <header>
         <a class="nav1" href="splash.html">
-          <img src="logo.svg" alt="" srcset="" />
+          <img src="svg/logo.svg" alt="" srcset="" />
         </a>
         <nav class="nav2">
-          <button class="toggle-btn">Menu</button>
+          <div class="container">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
           <ul>
             <li data-type="alle" class="valgt">Alle</li>
             <li data-type="Sneakers">Sneakers</li>
@@ -96,7 +86,22 @@
 
       <div class="push"></div>
     </div>
-    <footer class="footer">Gruppe 8 - Passion</footer>
+    <footer class="footer">
+      <wrapper>
+        <div class="kontakt">
+          <h3>Kontakt os her:</h3>
+          <p>Footprint</p>
+          <p>+45 12 34 56 78</p>
+          <p>kundeservice@footprint.dk</p>
+          <p>Guldbergsgade 29N,</p>
+          <p>2200 København</p>
+        </div>
+        <div class="medier">
+          <img src="svg/fb.svg" alt="" />
+          <img src="svg/insta.svg" alt="" />
+        </div>
+      </wrapper>
+    </footer>
 
     <script src="script.js"></script>
   </body>

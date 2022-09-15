@@ -23,17 +23,18 @@
 }
 
 .splashbtn {
-  background-color: #f4eddf;
+  background-color: transparent;
+  border: 5px solid #f4eddf;
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
   box-sizing: border-box;
-  color: #7b806a;
+  color: #f4eddf;
   cursor: pointer;
   font-family: Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   margin: 20px;
-  padding: 20px 25px;
+  padding: 10px 30px;
   outline: none;
   outline: 0;
   text-align: center;
@@ -44,43 +45,13 @@
   touch-action: manipulation;
   text-decoration: none;
 }
-
+.splashbtn:hover {
+  box-shadow: rgb(58, 66, 45) 0 10px 9px 0;
+  transform: translateY(-15px);
+}
 .knapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-@media (min-width: 1000px) {
-  .splashbtn {
-    background-color: transparent;
-    border: 5px solid #f4eddf;
-    border-radius: 40px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
-    box-sizing: border-box;
-    color: #f4eddf;
-    cursor: pointer;
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 20px;
-    padding: 20px 25px;
-    outline: none;
-    outline: 0;
-    text-align: center;
-    transform: translateY(0);
-    transition: transform 150ms, box-shadow 150ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-
-  .splashbtn:hover {
-    box-shadow: rgb(58, 66, 45) 0 10px 9px 0;
-    transform: translateY(-15px);
-  }
-  .splashbtn {
-    padding: 10px 30px;
-  }
 }
