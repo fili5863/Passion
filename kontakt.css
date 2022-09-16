@@ -34,6 +34,10 @@ h3 {
   color: var(--mørk);
   margin: 10px;
 }
+
+p {
+  font-family: Helvetica, sans-serif;
+}
 section {
   margin-block-end: 40px;
 }
